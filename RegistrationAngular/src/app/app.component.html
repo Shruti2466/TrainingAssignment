@@ -1,0 +1,31 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h2 class="text-center mb-4">Registration Form</h2>
+            <app-registeration (addItem)="onItemAdded($event)"></app-registeration>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center mt-5">
+      <div class="col-md-8">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h3 class="text-center mb-4">Item List</h3>
+            <ul class="list-group">
+              <li *ngFor="let item of itemList" class="list-group-item list-group-item-action flex-column align-items-start mb-2">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1">{{ item.name }}</h5>
+                </div>
+                <p class="mb-1"><strong>Email:</strong> {{ item.email }}</p>
+                <p class="mb-1"><strong>Date of Birth:</strong> {{ item.dob }}</p>
+                <small><strong>State:</strong> {{ item.state }}</small>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
